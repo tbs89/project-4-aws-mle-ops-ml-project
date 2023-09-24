@@ -192,7 +192,7 @@ Next step is to create a blank Python file in order to paste the training code:
 vim solution.py
 ```
 
-We will use the following command to paste the code to the file and press enter:
+We will use the following command to paste the code in <code>ec2train1.py</code> to the file and press enter:
 
 ```python
 :set paste
@@ -240,8 +240,16 @@ SageMaker:
 
 ## Lambda Functions Setup
 
+To create our Lambda function, we will navigate to AWS Lambda in our console and will click on "Create a function"
+that uses <code>Python 3.8</code>:
+
+[](!screenshots/lambda/snap1.png)
 
 
+[](!screenshots/lambda/snap2.png)
+
+
+Once created, we can 
 
 
 
