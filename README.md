@@ -8,14 +8,14 @@ deployment configuration, security, latency and concurrency.
 
 Firstly, we will create a notebook instance from Sagemaker >> *Notebook* >> *Notebook Instances* >> *Create notebook instance*
 
-[](!./screenshots/notebook/snap1.png)
+![](./screenshots/notebook/snap1.png)
 
 
 For this project we will user for our instance a <code>ml.t3.medium</code> type that we will name "project-4-udacity".
 
-[](!screenshots/notebook/snap2.png)
+![](./screenshots/notebook/snap2.png)
 
-[](!screenshots/notebook/snap3.png)
+![](./screenshots/notebook/snap3.png)
 
 
 ## S3 Setup
@@ -24,9 +24,9 @@ Next step is to create a new S3 Bucket:
 
 From S3, we will click on Buckets and Create bucket to create our new bucket
 
-[](!screenshots/notebook/snap4.png)
+![](./screenshots/notebook/snap4.png)
 
-[](!screenshots/notebook/snap5.png)
+![](./screenshots/notebook/snap5.png)
 
 Then upload the data to our bucket using wget command:
 
@@ -37,7 +37,7 @@ Then upload the data to our bucket using wget command:
 !aws s3 cp dogImages s3://project-4-udacity-ml/data/ --recursive
 ```
 
-[](!screenshots/notebook/snap6.png)
+![](./screenshots/notebook/snap6.png)
 
 
 After that, we can start our hyperparameter tunning job, setting parameters, estimators and tunners first.
@@ -106,90 +106,90 @@ tuner.fit({"training": "s3://project-4-udacity-ml/data/"})
 ```
 Hyperparameter Tunning Job:
 
-[](!screenshots/notebook/hpojob.png)
+![](./screenshots/notebook/hpojob.png)
 
 
-[](!screenshots/notebook/hpojob1.png)
+![](./screenshots/notebook/hpojob1.png)
 
 Training Jobs: Hyperparameter Tunning
 
-[](!screenshots/notebook/hpojob2.png)
+![](./screenshots/notebook/hpojob2.png)
 
 
-[](!screenshots/notebook/trainingjobshpo.png)
+![](./screenshots/notebook/trainingjobshpo.png)
 
 Estimators:
 
 One Instance:
 
-[](!screenshots/notebook/oneinstance.png)
+![](./screenshots/notebook/oneinstance.png)
 
 
 
 Five Instances:
 
-[](!screenshots/notebook/fiveinstances.png)
+![](./screenshots/notebook/fiveinstances.png)
 
 
 
 Training Jobs: Estimators
 
-[](!screenshots/notebook/trainingjobsestimators.png)
+![](./screenshots/notebook/trainingjobsestimators.png)
 
 
 
 All Training Jobs Completed
 
 
-[](!screenshots/notebook/alltrainingjobscompleted.png)
+![](./screenshots/notebook/alltrainingjobscompleted.png)
 
 
 
 Deployed Model
 
-[](!screenshots/notebook/endpoint.png)
+![](./screenshots/notebook/endpoint.png)
 
 
 ## EC2 Setup
 
 We will first navigate using the console to EC2 and will click on "Launch instaces"
 
-[](!screenshots/ec2/snap1.png)
+![](./screenshots/ec2/snap1.png)
 
 We give the name *project-4-aws-ml* and select *Deep Learning AMI GPU PyTorch* as AMI:
 
-[](!screenshots/ec2/snap2.png)
+![](./screenshots/ec2/snap2.png)
 
-[](!screenshots/ec2/snap3.png)
+![](./screenshots/ec2/snap3.png)
 
 
 Then we have to select an instance type, in this case we select <code>t3.medium</code> as a reasonable balance
 of performance and affordability.
 
-[](!screenshots/ec2/snap4.png)
+![](./screenshots/ec2/snap4.png)
 
 We will create also a key pair, so we can access, if we needed, from Cloud9:
 
 Key pair: *project4*
 
-[](!screenshots/ec2/keypair.png)
+![](./screenshots/ec2/keypair.png)
 
 After that, we can launch our EC2 instance:
 
-[](!screenshots/ec2/launching.png)
+![](./screenshots/ec2/launching.png)
 
-[](!screenshots/ec2/running.png)
+![](./screenshots/ec2/running.png)
 
 
 Now we can connect our instance:
 
-[](!screenshots/ec2/connecting1.png)
+![](./screenshots/ec2/connecting1.png)
 
 
-[](!screenshots/ec2/connecting2.png)
+![](./screenshots/ec2/connecting2.png)
 
 
-[](!screenshots/ec2/connecting3.png)
+![](./screenshots/ec2/connecting3.png)
 
 
 
@@ -202,7 +202,7 @@ unzip dogImages.zip
 ```
 
 
-[](!screenshots/ec2/commands1.png)
+![](./screenshots/ec2/commands1.png)
 
 and the command to create the directory for the model
 
@@ -210,7 +210,7 @@ and the command to create the directory for the model
 mkdir TrainedModels
 ```
 
-[](!screenshots/ec2/commands2.png)
+![](./screenshots/ec2/commands2.png)
 
 
 Next step is to create a blank Python file in order to paste the training code:
@@ -232,7 +232,7 @@ After pasting the code, we need to type the following command:
 :wq!
 ```
 
-[](!screenshots/ec2/commands3.png)
+![](./screenshots/ec2/commands3.png)
 
 
 Now we are ready to train the model, by typing the following command:
@@ -241,15 +241,15 @@ Now we are ready to train the model, by typing the following command:
 python solution.py
 ```
 
-[](!screenshots/ec2/commands4.png)
+![](./screenshots/ec2/commands4.png)
 Training model
 
-[](!screenshots/ec2/commands6.png)
+![](./screenshots/ec2/commands6.png)
 Model saved
 
 
 
-[](!screenshots/ec2/instancemetrics.png)
+![](./screenshots/ec2/instancemetrics.png)
 Metrics
 
 
@@ -270,15 +270,15 @@ SageMaker:
 To create our Lambda function, we will navigate to AWS Lambda in our console and will click on "Create a function"
 that uses <code>Python 3.8</code>:
 
-[](!screenshots/lambda/snap1.png)
+![](./screenshots/lambda/snap1.png)
 
 
-[](!screenshots/lambda/snap2.png)
+![](./screenshots/lambda/snap2.png)
 
 
 Once paste the code we have from the file <code>lambdafunction.py</code> and click on "Deploy":
 
-[](!screenshots/lambda/snap3.png)
+![](./screenshots/lambda/snap3.png)
 
 
 Now, if we try to test the Lambda function with the following json body:
@@ -298,13 +298,13 @@ update the rights adding a new policy to our Lambda function so that it can acce
 through IAM >> Roles >> searching our Lambda in the search bar:
 
 
-[](!screenshots/lambda/permit1.png)
+![](./screenshots/lambda/permit1.png)
 
 
 Now we will add the policy in order to give rights to trigger the test clicking on the role >> Attach policies
 and searching for the policy *AmazonSageMakerFullAccess*, selecting it and adding:
 
-[](!screenshots/lambda/permit2.png)
+![](./screenshots/lambda/permit2.png)
 
 Adding this policy will allow our lambda to access Sagemaker and our Endpoint. Also, by default, our Lambda function
 can only handle one request at one. To change this, we will use concurrency in order to give our Lambda the power to 
@@ -312,20 +312,20 @@ trigger multiple times at once.
 
 To add concurrency we would need to configure a new version we will click on Actions >> Publish new version:
 
-[](!screenshots/lambda/version.png)
+![](./screenshots/lambda/version.png)
 
 
 Now we will click on "Provisioned concurrency" and "Edit":
 
-[](!screenshots/lambda/version1.png)
+![](./screenshots/lambda/version1.png)
 
 We will set the concurrency to 3, so our Lambda function can handle 3 requests at once:
 
-[](!screenshots/lambda/version2.png)
+![](./screenshots/lambda/version2.png)
 
 New concurrency can take a few minutes to be ready:
 
-[](!screenshots/lambda/version3.png)
+![](./screenshots/lambda/version3.png)
 
 
 ## Auto-Scaling
@@ -334,12 +334,12 @@ Last step for our excersise is to implement Auto-scaling. Auto-scaling referrs t
 
 To add Auto-scaling, we will click on Sagemaker >> Endpoints >> Select our Endpoint >> Configure auto scaling
 
-[](!screenshots/lambda/auto1.png)
+![](./screenshots/lambda/auto1.png)
 
 
 First, we will increase up to 3 instances as max number of instances:
 
-[](!screenshots/lambda/auto2.png)
+![](./screenshots/lambda/auto2.png)
 
 
 Secondly, we will define the scaling policy. This would referr to the number of simultaneous requests that our endpoint would receive in order to trigger the auto-scaling feature and increase the number of instances. This value would be the *Target* and we will set it to 30 requests. Then we have *Scale in cool down* and *Scale our cool down*:
@@ -350,11 +350,11 @@ Secondly, we will define the scaling policy. This would referr to the number of 
 
 We wil set this to 45 seconds:
 
-[](!screenshots/lambda/auto3.png)
+![](./screenshots/lambda/auto3.png)
 
 And our endpoint would be ready:
 
-[](!screenshots/lambda/auto4.png)
+![](./screenshots/lambda/auto4.png)
 
 
 In this fourth project for the AWS Machine Learning Engineer Nanodegree, the focus has been on configuring and deploying a machine learning project covering aspects like computer resources, security, and concurrency. Initially, a SageMaker notebook instance was set up, followed by creating an S3 bucket for storing project data and subsequently configuring a model with hyperparameters. Training was conducted on both EC2 and SageMaker, emphasizing EC2's customization and SageMaker's user-friendly automation. Lambda functions were implemented to invoke the model endpoint, which involved resolving permission issues and configuring concurrency for handling multiple requests. Finally, auto-scaling was applied to the deployed model to dynamically adjust instances based on the workload, enabling an efficient utilization of resources.
