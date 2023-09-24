@@ -226,6 +226,19 @@ Model saved
 Metrics
 
 
+Comparision SageMaker vs EC2
+
+Training models on EC2 offers extensive customization and control, allowing users to manually manage the entire machine learning workflow, optimizing it based on specific needs. On the other hand, Amazon SageMaker provides a more integrated and automated environment, focusing on streamlining the machine learning process from training to deployment, making it user-friendly and efficient.
+
+EC2:
+- High Customization & Control
+- Manual Management of Workflow
+
+SageMaker:
+- Integrated & Automated Workflow
+- User-friendly & Efficient
+
+## Lambda Functions Setup
 
 
 
