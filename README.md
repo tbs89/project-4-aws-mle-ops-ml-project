@@ -107,20 +107,50 @@ if __name__=='__main__':
 # Hyperparameter job:
 tuner.fit({"training": "s3://project-4-udacity-ml/data/"})
 ```
+Hyperparameter Tunning Job:
 
-Training Jobs Snapshots
+[](!screenshots/notebook/hpojob.png)
+
+
+[](!screenshots/notebook/hpojob1.png)
+
+Training Jobs: Hyperparameter Tunning
+
+[](!screenshots/notebook/hpojob2.png)
+
+
+[](!screenshots/notebook/trainingjobshpo.png)
+
+Estimators:
+
+One Instance:
 
 [](!screenshots/notebook/oneinstance.png)
 
-[](!screenshots/notebook/fiveinstance.png)
 
 
-[](!screenshots/notebook/trainingjobs.png)
+Five Instances:
+
+[](!screenshots/notebook/fiveinstances.png)
+
+
+
+Training Jobs: Estimators
+
+[](!screenshots/notebook/trainingjobsestimators.png)
+
+
+
+All Training Jobs Completed
+
+
+[](!screenshots/notebook/alltrainingjobscompleted.png)
+
 
 
 Deployed Model
 
-[](!screenshots/notebook/oneendpoint.png)
+[](!screenshots/notebook/endpoint.png)
 
 
 ## EC2 Setup
@@ -249,8 +279,9 @@ that uses <code>Python 3.8</code>:
 [](!screenshots/lambda/snap2.png)
 
 
-Once created, we can 
+Once paste the code we have from the file <code>lambdafunction.py</code>:
 
+[](!screenshots/lambda/snap3.png)
 
 
 
