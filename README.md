@@ -1,7 +1,7 @@
 ```python
 ```
 
-# project-4-aws-mle-ops-ml-project
+# Project 4 AWS Machine Learning Engineer Nanodegre
 
 This is the fourth project of the nanodegree **AWS Machine Learning Engineer**. In this project we are going to
 set up the right configuration of a machine learning project involving computer resources, production configuration, 
@@ -124,6 +124,117 @@ Deployed Model
 
 
 ## EC2 Setup
+
+We will first navigate using the console to EC2 and will click on "Launch instaces"
+
+[](!screenshots/ec2/snap1.png)
+
+We give the name *project-4-aws-ml* and select *Deep Learning AMI GPU PyTorch* as AMI:
+
+[](!screenshots/ec2/snap2.png)
+
+[](!screenshots/ec2/snap3.png)
+
+
+Then we have to select an instance type, in this case we select <code>t3.medium</code> as a reasonable balance
+of performance and affordability.
+
+[](!screenshots/ec2/snap4.png)
+
+We will create also a key pair, so we can access, if we needed, from Cloud9:
+
+Key pair: *project4*
+
+[](!screenshots/ec2/keypair.png)
+
+After that, we can launch our EC2 instance:
+
+[](!screenshots/ec2/launching.png)
+
+[](!screenshots/ec2/running.png)
+
+
+Now we can connect our instance:
+
+[](!screenshots/ec2/connecting1.png)
+
+
+[](!screenshots/ec2/connecting2.png)
+
+
+[](!screenshots/ec2/connecting3.png)
+
+
+
+
+We run our first command:
+
+```python
+wget https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip
+unzip dogImages.zip
+```
+
+
+[](!screenshots/ec2/commands1.png)
+
+and the command to create the directory for the model
+
+```python
+mkdir TrainedModels
+```
+
+[](!screenshots/ec2/commands2.png)
+
+
+Next step is to create a blank Python file in order to paste the training code:
+
+```python
+vim solution.py
+```
+
+We will use the following command to paste the code to the file and press enter:
+
+```python
+:set paste
+```
+
+
+After pasting the code, we need to type the following command:
+
+```python
+:wq!
+```
+
+[](!screenshots/ec2/commands3.png)
+
+
+Now we are ready to train the model, by typing the following command:
+
+```python
+python solution.py
+```
+
+[](!screenshots/ec2/commands4.png)
+Training model
+
+[](!screenshots/ec2/commands6.png)
+Model saved
+
+
+
+[](!screenshots/ec2/instancemetrics.png)
+Metrics
+
+
+
+
+
+
+
+
+
+
+
 
 
 
