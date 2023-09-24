@@ -8,7 +8,7 @@ deployment configuration, security, latency and concurrency.
 
 Firstly, we will create a notebook instance from Sagemaker >> *Notebook* >> *Notebook Instances* >> *Create notebook instance*
 
-[](!screenshots/notebook/snap1.png)
+[](!./screenshots/notebook/snap1.png)
 
 
 For this project we will user for our instance a <code>ml.t3.medium</code> type that we will name "project-4-udacity".
